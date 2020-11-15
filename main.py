@@ -77,18 +77,12 @@ def restore_object():
         for x in item:
             data.append(x)
     
-    # Creating New Object with Restored Data :
-    
-    # NOTE :  
-    # data[1], => username
-    # data[2], => password
-    # data[3], => nama
-    # data[4], => email
-    # data[5], => phone_num
-    # data[6], => tgl_lahir
-    # data[7], => address
-    # data[8], => grade
+    # Check Data is Empty :
+    if not data:
+        print("Error! Data tidak dapat ditemukan!")
+        return
 
+    # Creating New Object with Restored Data :
     restored_account = account.Account(data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8])
 
     # Result :

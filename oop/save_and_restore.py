@@ -38,5 +38,5 @@ class Action:
         cursor.execute("SELECT * FROM " + self._table_name + " WHERE username = '%s'" % username)
 
         result = cursor.fetchall()
-
+        
         return result
